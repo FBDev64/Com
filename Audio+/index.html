@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EvrestAudio</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Lecteur Audio+</h1>
+	<div class="player">
+		<audio id="audio-player">
+			<source src="your-audio-file.mp3" type="audio/mp3">
+			<source src="your-audio-file.m4a" type="audio/m4a">
+			<!-- Ajoutez ici d'autres formats audio pris en charge -->
+		</audio>
+		<div class="controls">
+			<button id="play-pause-btn">Play</button>
+			<div id="seek-slider"></div>
+			<div id="volume-slider"></div>
+			<input type="file" id="audio-file-input">
+			<button id="mute-btn">Mute</button>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>

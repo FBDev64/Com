@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My Retro Blog</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div id="header">
+    <h1>My Retro Blog</h1>
+  </div>
+
+  <div id="content">
+    <div id="new-post">
+      <h2>Create a New Post</h2>
+      <input type="text" id="post-title" placeholder="Title">
+      <textarea id="post-content" placeholder="Content"></textarea>
+      <button onclick="createPost()">Post</button>
+    </div>
+
+    <div id="post-container">
+      <!-- Existing posts will be dynamically added here -->
+    </div>
+  </div>
+</body>
+
+</html>

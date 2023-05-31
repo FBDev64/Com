@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nintendo Entertainement System Cartridge</title>
+    <link href="Style.css" rel="stylesheet">
+    <link href="CSS-popup.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="nes-container">
+      <h1>Simulateur de cartridge NES</h1>
+      <form>
+        <label for="rom-file">ROM .nes :</label>
+        <input type="file" id="rom-file" name="rom-file" accept=".nes">
+        <button type="submit" id="load-button">Load</button>
+      </form>
+
+      <canvas id="screen" width="256" height="240"></canvas>
+    </div>
+
+    <div class="credits-container">
+      <button data-modal-target="#modal">Credits</button>
+      <div class="modal" id="modal">
+        <div class="modal-header">
+          <div class="title">Credits :</div>
+          <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>Ma page Pinterest</p>
+          <a href="https://www.pinterest.fr/EvrestRGB/" target="_blank">https://www.pinterest.fr/EvrestRGB/</a>
+        </div>
+      </div>
+      <div id="overlay" style="height: 100%;"></div>
+    </div>
+
+    <script src="cpu6502.js"></script>
+    <script src="nes-emulator.js"></script>
+    <script defer src="JS-popup.js"></script>
+    <script>
+      const romFileInput = document.getElementById("rom-file");
+      const loadButton = document.getElementById("load-button");
+      const screenCanvas = document.getElementById("screen");
+      const emulator = new NESEmulator(screenCanvas);
+
+      loadButton.addEventListener("click", (event) => {
+        event.preventDefault();
+        const romFile = romFileInput.files[0];
+        if (!romFile) return;
+        const fileReader = new FileReader();
+        fileReader.readAsArrayBuffer(romFile);
+        fileReader.onload = () => {
+          emulator.loadRom(fileReader.result);
+          emulator.start();
+        };
+      });
+    </script>
+  </body>
+</html>

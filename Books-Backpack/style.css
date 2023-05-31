@@ -1,0 +1,60 @@
+#backpack {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    position: relative;
+    background-color: #333;
+  }
+  
+  #backpack button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+  }
+  
+  #books {
+    display: none;
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    background-color: #ffffff;
+  }
+  
+  #books ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #books li a {
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 0 20px 20px 0;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  
+  #books li a img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  #books li a h2 {
+    margin: 10px 0;
+    font-size: 20px;
+  }
+  
+  #books li a p {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  

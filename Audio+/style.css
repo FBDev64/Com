@@ -1,0 +1,42 @@
+body {
+	background-color:cornflowerblue;
+	font-family: Consolas, monospace;
+}
+
+h1 {
+	font-family: Consolas;
+}
+
+button {
+	font-family: Consolas, monospace;
+	background-color:crimson;
+	color: black;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.player {
+	margin: auto;
+	width: 600px;
+}
+
+.controls {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 10px;
+}
+
+#seek-slider,
+#volume-slider {
+	margin: 0 10px;
+	flex-grow: 1;
+}
+
+#seek-slider input,
+#volume-slider input {
+	width: 100%;
+}
