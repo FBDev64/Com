@@ -1,0 +1,39 @@
+@import url(https://fonts.googleapis.com/css2?family=Consolas:wght@400;700&display=swap);
+
+body {
+  font-family: Consolas;
+}
+
+
+h1 {
+    color: royalblue;
+}
+
+.white-paper {
+  width: 8.5in;
+  height: 11in;
+  margin: 0 auto;
+  border: 1px solid #000;
+  padding: 10px;
+  background-color:whitesmoke;
+  font-family: Courier New;
+  font-size: 10pt;
+  line-height: 12pt;
+}
+
+.white-paper header {
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+.white-paper footer {
+  font-size: 8pt;
+  text-align: right;
+}
+
+.white-paper::after {
+  content: "Page " counter(page);
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
