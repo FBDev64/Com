@@ -1,4 +1,3 @@
-# One in the Socket
 ![image](https://i.imgur.com/sJTNwT4.gif)
 
 ## Getting started
@@ -16,8 +15,3 @@ npm run dev
 
 `npm run watch` will continually rebuild the application as your source files change.
 
-`npm run dev` will run `npm start` and `npm run watch` in parallel.
-
-## License
-
-[MIT](LICENSE).
